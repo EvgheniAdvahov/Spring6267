@@ -1,5 +1,6 @@
 package ru.gb.my_first_crud.repository;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -34,6 +35,35 @@ public class UserRepository {
         String sql = "INSERT INTO userTable (firstName,lastName) VALUES ( ?, ?)";
         jdbc.update(sql, user.getFirstName(), user.getLastName());
         return  user;
+    }
+
+    public User update(User user) {
+        String sql = "UPDATE userTable SET firstName = ?, lastName = ?";
+        jdbc.update(sql, user.getFirstName(), user.getLastName());
+        return user;
+    }
+
+    public void deleteById(int id){
+        String sql = "DELETE FROM userTable WHERE id=?";
+        jdbc.update(sql, id);
+        System.out.println("Deleted Record with ID = " + id );
+    }
+
+    public User findById(int id) {
+        String sql = "SELECT * FROM userTable WHERE id=?";
+        try {
+            return jdbc.queryForObject(sql, new Object[]{id}, (rs, rowNum) -> {
+                User user = new User();
+                user.setId(rs.getInt("id"));
+                user.setFirstName(rs.getString("firstName"));
+                user.setLastName(rs.getString("lastName"));
+                System.out.println(user);
+                return user;
+            });
+        }
+        catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
 
     //public void deleteById(int id)
