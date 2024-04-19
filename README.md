@@ -21,6 +21,13 @@ my_first_crud - simple CRUD application from Java Spring Boot
 
 CSS_Templates - templates for CRUD application(Just copy to template dir)
 
+# Seminar 3 Spring WEB (MVC and REST)
+example1_sem3 - simple example created web application (home, cats, game)
+
+example2_sem3 - simple example created rest + postman
+
+example3_sem3 - simple example created rest point home task
+
 
 
 
