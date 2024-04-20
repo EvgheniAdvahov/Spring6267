@@ -43,4 +43,6 @@ public class DataProcessingService {
                 .average()
                 .orElse(0);
     }
+
+
 }

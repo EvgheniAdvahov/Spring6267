@@ -2,6 +2,16 @@ package ru.gb.example3_sem3.domain;
 
 public class User {
 
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private String name;
     private int age;
     private String email;
