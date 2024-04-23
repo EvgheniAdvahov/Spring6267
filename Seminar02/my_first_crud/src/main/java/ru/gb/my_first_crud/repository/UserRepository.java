@@ -1,24 +1,28 @@
 package ru.gb.my_first_crud.repository;
 
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import ru.gb.my_first_crud.properties.SqlCommands;
 import ru.gb.my_first_crud.model.User;
 
 import java.util.List;
 
 @Repository
+@AllArgsConstructor
 public class UserRepository {
 
     private final JdbcTemplate jdbc;
-
-    public UserRepository(JdbcTemplate jdbc) {
-        this.jdbc = jdbc;
-    }
+    @Autowired
+    private SqlCommands sqlCommand;
 
     public List<User> findAll() {
         String sql = "SELECT * FROM userTable";
+        String msg = sqlCommand.getFindById();
+        System.out.println("msg is "+ msg);
 
         RowMapper<User> userRowMapper = (r, i) -> {
             User rowObject = new User();
