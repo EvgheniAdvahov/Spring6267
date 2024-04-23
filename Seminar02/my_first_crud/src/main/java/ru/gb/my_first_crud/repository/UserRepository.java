@@ -18,10 +18,7 @@ public class UserRepository {
     private final SqlCommands sqlCommand;
 
     public List<User> findAll() {
-        String sql = "SELECT * FROM userTable";
-        String msg = sqlCommand.getFindById();
-        System.out.println("msg is "+ msg);
-
+        String sql = sqlCommand.getFindAll();
         RowMapper<User> userRowMapper = (r, i) -> {
             User rowObject = new User();
             rowObject.setId(r.getInt("id"));
@@ -34,19 +31,19 @@ public class UserRepository {
     }
 
     public User save(User user) {
-        String sql = "INSERT INTO userTable (firstName,lastName) VALUES ( ?, ?)";
+        String sql = sqlCommand.getInsertUser();
         jdbc.update(sql, user.getFirstName(), user.getLastName());
         return user;
     }
 
     public void deleteById(int id) {
-        String sql = "DELETE FROM userTable WHERE id=?";
+        String sql = sqlCommand.getDeleteById();
         jdbc.update(sql, id);
         System.out.println("Deleted Record with ID = " + id);
     }
 
     public User findById(int id) {
-        String sql = "SELECT * FROM userTable WHERE id=?";
+        String sql = sqlCommand.getFindById();
         try {
             return jdbc.queryForObject(sql, new Object[]{id}, (rs, rowNum) -> {
                 User user = new User();
@@ -61,7 +58,7 @@ public class UserRepository {
     }
 
     public User update(User user) {
-        String sql = "UPDATE userTable SET firstName = ?, lastName = ? WHERE id = ?";
+        String sql = sqlCommand.getUpdateUser();
         jdbc.update(sql, user.getFirstName(), user.getLastName(), user.getId());
         return user;
     }
