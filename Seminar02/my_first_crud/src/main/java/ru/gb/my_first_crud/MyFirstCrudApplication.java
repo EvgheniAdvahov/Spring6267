@@ -7,6 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @PropertySource({"classpath:sql.properties","classpath:application.properties"})
+//@ConfigurationPropertiesScan("ru.gb.my_first_crud.properties") //лучше когда много класов
 public class MyFirstCrudApplication {
 
 
