@@ -26,7 +26,6 @@ public class UserRepository {
             rowObject.setLastName(r.getString("lastName"));
             return rowObject;
         };
-
         return jdbc.query(sql, userRowMapper);
     }
 
