@@ -61,8 +61,8 @@ public class UserRepository {
     }
 
     public User update(User user) {
-        String sql = "UPDATE userTable SET firstName = ?, lastName = ?";
-        jdbc.update(sql, user.getFirstName(), user.getLastName());
+        String sql = "UPDATE userTable SET firstName = ?, lastName = ? WHERE id = ?";
+        jdbc.update(sql, user.getFirstName(), user.getLastName(), user.getId());
         return user;
     }
 
