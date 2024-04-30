@@ -1,6 +1,6 @@
 package com.example.example4sem6_rikky_and_morty_rest.service;
 
-import com.example.example4sem6_rikky_and_morty_rest.domain.Characters;
+import com.example.example4sem6_rikky_and_morty_rest.domain.Characters.Characters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;

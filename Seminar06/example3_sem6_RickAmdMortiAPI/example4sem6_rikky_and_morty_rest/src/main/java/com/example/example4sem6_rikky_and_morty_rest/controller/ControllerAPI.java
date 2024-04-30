@@ -1,9 +1,8 @@
 package com.example.example4sem6_rikky_and_morty_rest.controller;
 
-import com.example.example4sem6_rikky_and_morty_rest.domain.Characters;
+import com.example.example4sem6_rikky_and_morty_rest.domain.Characters.Characters;
 import com.example.example4sem6_rikky_and_morty_rest.properties.Params;
 import com.example.example4sem6_rikky_and_morty_rest.service.ServiceApi;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package com.example.example4sem6_rikky_and_morty_rest.domain;
+package com.example.example4sem6_rikky_and_morty_rest.domain.Characters;
 
 import lombok.Data;
 
