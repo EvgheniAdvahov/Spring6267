@@ -17,7 +17,7 @@ public class ServiceApiImpl implements ServiceApi{
     @Autowired
     private HttpHeaders headers;
 
-    private  static final String CHARACTER_API = "https://rickandmortyapi.com/api/character";
+//    private  static final String CHARACTER_API = "https://rickandmortyapi.com/api/character";
     @Override
     public Characters getAllCharacters(String param) {
         headers.setAccept(List.of(MediaType.APPLICATION_JSON));

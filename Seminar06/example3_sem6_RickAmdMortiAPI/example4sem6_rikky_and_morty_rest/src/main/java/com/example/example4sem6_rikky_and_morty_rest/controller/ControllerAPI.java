@@ -22,18 +22,19 @@ public class ControllerAPI {
     @GetMapping("/")
     public String showMainPage(Model model) {
         Characters allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API());
-//        "https://rickandmortyapi.com/api/character"+id
-        System.out.println(allCharacters.getInfo());
-        System.out.println(allCharacters.getResults());
+        System.out.println(param.getCHARACTER_API());
+//        System.out.println(allCharacters.getInfo());
+//        System.out.println(allCharacters.getResults());
         model.addAttribute("characters", allCharacters.getResults());
         return "index";
     }
 
     @GetMapping("/pages")
-    public String showAllPages(Model model, @RequestParam int id){
-        Characters allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API());
-        System.out.println(param.getCHARACTER_API());
-        System.out.println(allCharacters.getInfo().getPages());
+    public String showAllPages(@RequestParam String id, Model model) {
+        Characters allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API() + "/?page=" + id);
+        System.out.println(param.getCHARACTER_API() + "/?id=" + id);
+//        System.out.println(allCharacters);
+//        System.out.println(allCharacters.getInfo().getPages());
         model.addAttribute("characters", allCharacters.getResults());
         return "index";
     }
@@ -44,9 +45,6 @@ public class ControllerAPI {
 //        Characters allCharacters = serviceApi.getAllCharacters();
 //        return new ResponseEntity<>(allCharacters, HttpStatus.OK);
 //    }
-
-
-
 
 
 }
