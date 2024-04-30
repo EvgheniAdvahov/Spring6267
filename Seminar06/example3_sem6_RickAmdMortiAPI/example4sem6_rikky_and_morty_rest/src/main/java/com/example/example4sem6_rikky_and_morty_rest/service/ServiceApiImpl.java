@@ -19,10 +19,10 @@ public class ServiceApiImpl implements ServiceApi{
 
     private  static final String CHARACTER_API = "https://rickandmortyapi.com/api/character";
     @Override
-    public Characters getAllCharacters() {
+    public Characters getAllCharacters(String param) {
         headers.setAccept(List.of(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>(headers);
-        ResponseEntity<Characters> responce = template.exchange(CHARACTER_API, HttpMethod.GET,entity, Characters.class);
+        ResponseEntity<Characters> responce = template.exchange(param, HttpMethod.GET,entity, Characters.class);
 
         return responce.getBody();
     }
