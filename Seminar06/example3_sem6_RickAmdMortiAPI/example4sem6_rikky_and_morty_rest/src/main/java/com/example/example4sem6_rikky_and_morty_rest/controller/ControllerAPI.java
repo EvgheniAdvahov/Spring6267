@@ -40,7 +40,7 @@ public class ControllerAPI {
         } else {
             String id = String.valueOf(ID);
             allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API() + "/?page=" + id);
-            System.out.println(param.getCHARACTER_API() + "/?id=" + id);
+            System.out.println(param.getCHARACTER_API() + "?id=" + id);
             model.addAttribute("characters", allCharacters.getResults());
         }
         return "index";
@@ -53,7 +53,7 @@ public class ControllerAPI {
             ID--;
             String id = String.valueOf(ID);
             Characters allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API() + "/?page=" + id);
-            System.out.println(param.getCHARACTER_API() + "/?id=" + id);
+            System.out.println(param.getCHARACTER_API() + "?id=" + id);
             model.addAttribute("characters", allCharacters.getResults());
         } else {
             String id = String.valueOf(ID);
@@ -66,7 +66,7 @@ public class ControllerAPI {
 
     @GetMapping("personal/{id}")
     public String showCaracterInfo(@PathVariable String id, Model model) {
-        PersonalCharacter character = serviceApi.getCharacterInfo(id);
+        PersonalCharacter character = serviceApi.getCharacterInfo(param.getCHARACTER_API()+id);
         System.out.println(character.getName());
         model.addAttribute("caracterInfo", character);
         return "characterinfo";

@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 @Service
-public class ServiceApiImpl implements ServiceApi{
+public class ServiceApiImpl implements ServiceApi {
 
     @Autowired
     private RestTemplate template;
@@ -18,22 +18,20 @@ public class ServiceApiImpl implements ServiceApi{
     @Autowired
     private HttpHeaders headers;
 
-//    private  static final String CHARACTER_API = "https://rickandmortyapi.com/api/character";
     @Override
     public Characters getAllCharacters(String param) {
         headers.setAccept(List.of(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>(headers);
-        ResponseEntity<Characters> responce = template.exchange(param, HttpMethod.GET,entity, Characters.class);
+        ResponseEntity<Characters> responce = template.exchange(param, HttpMethod.GET, entity, Characters.class);
 
         return responce.getBody();
     }
 
     @Override
-    public PersonalCharacter getCharacterInfo(String id) {
-        String param = "https://rickandmortyapi.com/api/character/" + id;
+    public PersonalCharacter getCharacterInfo(String param) {
         headers.setAccept(List.of(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>(headers);
-        ResponseEntity<PersonalCharacter> responce = template.exchange(param, HttpMethod.GET,entity, PersonalCharacter.class);
+        ResponseEntity<PersonalCharacter> responce = template.exchange(param, HttpMethod.GET, entity, PersonalCharacter.class);
         return responce.getBody();
 
     }

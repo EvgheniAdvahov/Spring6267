@@ -34,7 +34,8 @@
         <tr th:each="character : ${characters}">
             <td th:text="${character.id}"></td>
             <td>
-                <a th:with="characterUrl=@{'/personal/' + ${character.id}}" th:href="@{${characterUrl}}" th:text="${character.name}"></a>
+                <a th:with="characterUrl=@{'/personal/' + ${character.id}}" th:href="@{${characterUrl}}"
+                   th:text="${character.name}"></a>
             </td>
             <td th:text="${character.status}"></td>
             <td th:text="${character.species}"></td>
