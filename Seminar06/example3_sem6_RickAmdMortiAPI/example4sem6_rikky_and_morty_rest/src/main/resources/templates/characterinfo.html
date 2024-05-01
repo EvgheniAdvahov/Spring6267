@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <link href="/css/bootstrap-min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div>
+        <div class="text-center">
+            <a class="btn btn-primary" href="/" role="button">Back</a>
+        </div>
+
+        <h2 class="text-center">Info</h2>
+        <form action="" th:object="${caracterInfo}">
+
+            <div class="text-center">
+                <label class="col-sm-4 col-form-label" th:text="${caracterInfo.name}"></label>
+            </div>
+
+            <div class="text-center">
+                <img th:src="${caracterInfo.image}" alt="...">
+            </div>
+
+            <div class="text-center">
+                <label class="col-sm-4 col-form-label" th:text="${caracterInfo.status}"></label>
+            </div>
+
+            <div class="text-center">
+                <label class="col-sm-4 col-form-label" th:text="${caracterInfo.gender}"></label>
+            </div>
+
+            <div class="text-center">
+                <label class="col-sm-4 col-form-label" th:text="${caracterInfo.getOrigin().name}"></label>
+            </div>
+
+            <div class="text-center">
+                <a class="col-sm-4 col-form-label" th:href="${caracterInfo.getOrigin().url}"
+                   th:text="${caracterInfo.getOrigin().url}"></a>
+            </div>
+
+            <div class="text-center">
+                <label class="col-sm-4 col-form-label" th:text="${caracterInfo.episode}"></label>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

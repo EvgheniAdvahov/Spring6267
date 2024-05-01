@@ -1,6 +1,7 @@
 package com.example.example4sem6_rikky_and_morty_rest.controller;
 
 import com.example.example4sem6_rikky_and_morty_rest.domain.Characters.Characters;
+import com.example.example4sem6_rikky_and_morty_rest.domain.PersonalCharacter.PersonalCharacter;
 import com.example.example4sem6_rikky_and_morty_rest.properties.Params;
 import com.example.example4sem6_rikky_and_morty_rest.service.ServiceApi;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,7 @@ public class ControllerAPI {
     @GetMapping("/pages/next")
     public String showNextPages(Model model) {
         Characters allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API());
-        if (ID < allCharacters.getInfo().getPages()){
+        if (ID < allCharacters.getInfo().getPages()) {
             ID++;
             String id = String.valueOf(ID);
             allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API() + "/?page=" + id);
@@ -48,7 +49,7 @@ public class ControllerAPI {
 
     @GetMapping("/pages/previous")
     public String showPreviousPages(Model model) {
-        if (ID > 1){
+        if (ID > 1) {
             ID--;
             String id = String.valueOf(ID);
             Characters allCharacters = serviceApi.getAllCharacters(param.getCHARACTER_API() + "/?page=" + id);
@@ -61,6 +62,14 @@ public class ControllerAPI {
             model.addAttribute("characters", allCharacters.getResults());
         }
         return "index";
+    }
+
+    @GetMapping("personal/{id}")
+    public String showCaracterInfo(@PathVariable String id, Model model) {
+        PersonalCharacter character = serviceApi.getCharacterInfo(id);
+        System.out.println(character.getName());
+        model.addAttribute("caracterInfo", character);
+        return "characterinfo";
     }
 
 
