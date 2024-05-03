@@ -45,5 +45,14 @@ CSS_Templates - templates for CRUD application(Just copy to template dir)
 - HomeWorkSpring_05-master - example task from ilya bunakov
 - Scrum-board - example scrum board
 
+# Seminar 7 Spring Security 
+***
+- example1_sem7 - example spring security simple 
+- example2_sem7 - example spring security 2.7.4 
+- example3_sem7 - example spring security JWT
+- example3_sem7 - example spring security home task
+
+
+
 
 
