@@ -52,6 +52,14 @@ CSS_Templates - templates for CRUD application(Just copy to template dir)
 - example3_sem7 - example spring security JWT
 - example3_sem7 - example spring security home task
 
+# Seminar 8 Spring AOP 
+***
+- example1_sem8 - example spring aspect simple + annotation
+- example2_sem8 - example spring transaction 
+- example3_sem8 - example spring HTTP interceptor
+- homework_7_light - example spring security 
+- homework_7_hard - example spring OAUTH2 
+
 
 
 

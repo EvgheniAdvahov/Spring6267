@@ -1,0 +1,36 @@
+06-05-2024 20:26:04 INFO  Starting SpringHomework8Application using Java 21.0.2 with PID 37628 (G:\GB\Spring6267\Spring6267\Seminar08\homework_7_light\SpringHomework8-main\target\classes started by Andrey in G:\GB\Spring6267\Spring6267\Seminar08\homework_7_light\SpringHomework8-main)
+06-05-2024 20:26:04 INFO  No active profile set, falling back to 1 default profile: "default"
+06-05-2024 20:26:06 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-05-2024 20:26:06 INFO  Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interface.
+06-05-2024 20:26:07 INFO  Tomcat initialized with port 8080 (http)
+06-05-2024 20:26:07 INFO  Starting service [Tomcat]
+06-05-2024 20:26:07 INFO  Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-05-2024 20:26:07 INFO  Initializing Spring embedded WebApplicationContext
+06-05-2024 20:26:07 INFO  Root WebApplicationContext: initialization completed in 2822 ms
+06-05-2024 20:26:08 INFO  HikariPool-1 - Starting...
+06-05-2024 20:26:08 INFO  HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:0736cd45-dbc1-4d3c-b70b-28f3dc0e8481 user=SA
+06-05-2024 20:26:08 INFO  HikariPool-1 - Start completed.
+06-05-2024 20:26:08 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+06-05-2024 20:26:08 INFO  HHH000412: Hibernate ORM core version 6.4.4.Final
+06-05-2024 20:26:08 INFO  HHH000026: Second-level cache disabled
+06-05-2024 20:26:09 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+06-05-2024 20:26:10 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-05-2024 20:26:10 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2024 20:26:10 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2024 20:26:11 INFO  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ca006ac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@dc3eda6, org.springframework.security.web.context.SecurityContextHolderFilter@6e4bccc, org.springframework.security.web.header.HeaderWriterFilter@769a9b7a, org.springframework.web.filter.CorsFilter@1372696b, org.springframework.security.web.authentication.logout.LogoutFilter@74ab8610, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4425b6ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d2ff73a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@736a8aea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ca7bddd, org.springframework.security.web.access.ExceptionTranslationFilter@71e55e48, org.springframework.security.web.access.intercept.AuthorizationFilter@6dc7b7f]
+06-05-2024 20:26:11 INFO  Tomcat started on port 8080 (http) with context path ''
+06-05-2024 20:26:11 INFO  Started SpringHomework8Application in 7.582 seconds (process running for 8.478)
+06-05-2024 20:26:20 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-05-2024 20:26:20 INFO  Initializing Servlet 'dispatcherServlet'
+06-05-2024 20:26:20 INFO  Completed initialization in 1 ms
+06-05-2024 20:26:36 INFO  Пользователь: anonymousUser вызвал метод: getAllBooks с параметрами: []
+06-05-2024 20:27:31 INFO  Пользователь: admin вызвал метод: getAllBooks с параметрами: []
+06-05-2024 20:27:53 INFO  Пользователь: anonymousUser вызвал метод: getAllBooks с параметрами: []
+06-05-2024 20:28:05 INFO  Пользователь: user вызвал метод: getAllBooks с параметрами: []
+06-05-2024 20:28:08 INFO  Пользователь: user вызвал метод: getBookByName с параметрами: [Белый Клык]
+06-05-2024 20:28:08 INFO  Пользователь: user вызвал метод: getBookByName с параметрами: [Белый Клык]
+06-05-2024 20:28:08 INFO  Пользователь: user вызвал метод: sellBook с параметрами: [Белый Клык]
+06-05-2024 20:28:08 INFO  Пользователь: user вызвал метод: getAllBooks с параметрами: []
+06-05-2024 20:28:26 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+06-05-2024 20:28:26 INFO  HikariPool-1 - Shutdown initiated...
+06-05-2024 20:28:26 INFO  HikariPool-1 - Shutdown completed.
