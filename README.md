@@ -60,6 +60,13 @@ CSS_Templates - templates for CRUD application(Just copy to template dir)
 - homework_7_light - example spring security 
 - homework_7_hard - example spring OAUTH2 
 
+# Seminar 9 Spring Cloud 
+***
+- SpringCloud - example spring eureka + gateway
+- CloudExampleWhithAllModules - example cloud all moduls 
+- OpenFaign - example openfeign
+- HomeWorkSpring_08-master- example simple work seminar 8 
+- HardHomeWorkSeminar8 - example hard work seminar 8 
 
 
 
