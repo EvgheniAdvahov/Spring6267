@@ -68,6 +68,11 @@ CSS_Templates - templates for CRUD application(Just copy to template dir)
 - HomeWorkSpring_08-master- example simple work seminar 8 
 - HardHomeWorkSeminar8 - example hard work seminar 8 
 
+# Seminar 10 Spring Tests Mockito 
+***
+- example1_sem1 - example module and integration test
+- GetAccount.jmx - configuration file for JMETER
+
 
 
 
