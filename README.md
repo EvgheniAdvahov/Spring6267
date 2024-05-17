@@ -73,6 +73,13 @@ CSS_Templates - templates for CRUD application(Just copy to template dir)
 - example1_sem1 - example module and integration test
 - GetAccount.jmx - configuration file for JMETER
 
+# Seminar 11 Spring Prometheus Grafana 
+***
+- DZ.Spring.sem6-master - example whith monitoring
+
+- Grafana 11 version for Windows [a link](https://disk.yandex.ru/d/HUIDbnzgzHFxFQ)
+- nssm 2.24 version for Windows [a link](https://disk.yandex.ru/d/mBtEzqwd_8agTQ)
+- prometheus 2.52 version for Windows [a link](https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.windows-amd64.zip)
 
 
 
